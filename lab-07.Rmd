@@ -11,6 +11,10 @@ output: github_document
 library(tidyverse) 
 ```
 
+```{r load-data}
+df <- read_csv("~/Documents/GitHub/lab_07_betterviz/kansas_grouped_rolling_avg.csv")
+```
+
 ### Exercise 1
 
 Remove this text, and add your answer for Exercise 1 here.
