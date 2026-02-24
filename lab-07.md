@@ -1,7 +1,7 @@
 Lab 07 - Conveying the right message through visualisation
 ================
-Insert your name here
-Insert date here
+Lily Botha
+02/24/2026
 
 ### Load packages and data
 
