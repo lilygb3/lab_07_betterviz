@@ -80,3 +80,38 @@ provide strong evidence about whether mask wearing reduces COVID spread
 because many other factors could explain the trends/differences. This
 doesn’t fully align with my knowledge about how mask wearing reduces
 transmission.
+
+### Exercise 5
+
+The accurate visualization showed that counties with mask mandates had
+consistently higher COVID rates during this time period. Counties with
+mask mandates decline, but counties with no mask mandates stayed stable.
+Using a single y-axis is important here so the differences can be judged
+accurately. Also, labeling the axes as “mask” and “no mask” doesn’t make
+sense.
+
+### Exercise 6
+
+The opposite message would be that mask and no-mask counties have
+similar rates, or that mask counties didn’t have less COVID cases over
+time. To create a visualization that reflects that, you could isolate a
+smaller time period where the trends are closer, like near the end, and
+adjust the y-axis scale to make the differences look even smaller.
+
+### Exercise 7
+
+``` r
+ggplot(df, aes(x = date, y = rolling_avg, color = mask_mandate)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, 40)) + 
+  labs(
+    title = "Kansas COVID-19 Case Rates by Mask Mandate Status",
+    subtitle = "7-day rolling average of daily cases per 100K",
+    x = NULL,
+    y = "Daily cases (per 100K)",
+    color = NULL
+  ) +
+  theme_minimal()
+```
+
+![](lab-07_files/figure-gfm/opposite-plot-1.png)<!-- -->
